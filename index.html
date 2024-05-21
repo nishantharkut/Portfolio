@@ -14,61 +14,95 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
 
 <!-- TODO 7: Add the Contact Me and About Me page links -->
 
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <title>NishFolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            background-color: #333;
+            color: #ddd;
         }
         header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
+            background: #8cb369; /* Pista Green */
+            color: #ddd;
+            padding: 20px 0;
             text-align: center;
         }
-        nav a {
-            color: #fff;
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            animation: fadeInDown 2s;
+        }
+        header nav a {
+            color: #ddd;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
         }
-        nav a:hover {
-            text-decoration: underline;
+        header nav a:hover {
+            color: #ff6347; /* Dim Red */
         }
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            margin: 30px auto;
         }
-        h1, h2 {
+        h2 {
             text-align: center;
+            margin: 20px 0;
+            font-size: 2em;
+            animation: fadeInUp 2s;
+            color: #8cb369; /* Pista Green */
         }
-        ol {
-            padding-left: 20px;
+        .project {
+            margin-bottom: 40px;
+            animation: fadeIn 2s;
         }
-        li {
-            margin-bottom: 20px;
-        }
-        li img {
-            display: block;
-            margin: 10px auto;
+        .project img {
+            max-width: 100%;
+            border-radius: 5px;
         }
         footer {
-            background: #333;
-            color: #fff;
+            background: #8cb369; /* Pista Green */
+            color: #333;
             text-align: center;
             padding: 10px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -84,20 +118,28 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
         <h2>Hi, I am a Graphic Designer, UI/UX Designer, Web Developer, and Web3 Enthusiast</h2>
         <hr>
         <h2>Here are my projects:</h2>
-        <ol>
-            <li>
-                <a href="./public/movie-ranking.html">Movie Ranking Project</a>
-                <br><img src="./assets/images/movie-ranking.png" height="200" alt="Movie Ranking Project Screenshot">
-            </li>
-            <li>
-                <a href="./public/birthday-invite.html">Birthday Invite Project</a>
-                <br><img src="./assets/Portfolios/Birthday project.PNG" height="300" alt="Birthday Invite Project Screenshot">
-            </li>
-        </ol>
-        <br><hr>
+        <div class="row">
+            <div class="col-md-6 project">
+                <a href="./public/movie-ranking.html">
+                    <h3>Movie Ranking Project</h3>
+                    <img src="./assets/images/movie-ranking.png" alt="Movie Ranking Project Screenshot">
+                </a>
+            </div>
+            <div class="col-md-6 project">
+                <a href="./public/birthday-invite.html">
+                    <h3>Birthday Invite Project</h3>
+                    <img src="./assets/Portfolios/Birthday project.PNG" alt="Birthday Invite Project Screenshot">
+                </a>
+            </div>
+        </div>
+        <hr>
     </div>
     <footer>
         &copy; 2024 Nishant's Portfolio
     </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
