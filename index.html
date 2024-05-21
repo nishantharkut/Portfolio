@@ -14,30 +14,90 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
 
 <!-- TODO 7: Add the Contact Me and About Me page links -->
 
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <title>NishFolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 20px;
+        }
+        li img {
+            display: block;
+            margin: 10px auto;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        Nishant's Porfolio <\>
-    </h1>
-    <h2>Hi, I am an Graphic Designer, UI/UX designer, Web Developer and Web3 Enthusiast </h2>
-    <hr>
-    <h2>Here are my projects :</h2>
-    <ol>
-        <li><a href="./public/movie-ranking.html">Movie Ranking Project</a>
-            <ul><br><img src="./assets/images/movie-ranking.png" height="200" ></ul>
-        </li>
-
-        <li> <a href="./public/birthday-invite.html">Birthday Invite Project</a>
-            <ul><br><img src="./assets/Portfolios/Birthday project.PNG" height="300"></ul>
-        </li>
-    </ol>
-    <br><hr>
-    <a href="./public/about.html">About me</a>
-    <a href="./public/contact.html" >Contact Me</a>
+    <header>
+        <h1>Nishant's Portfolio</h1>
+        <nav>
+            <a href="./public/about.html">About Me</a>
+            <a href="./public/contact.html">Contact Me</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Hi, I am a Graphic Designer, UI/UX Designer, Web Developer, and Web3 Enthusiast</h2>
+        <hr>
+        <h2>Here are my projects:</h2>
+        <ol>
+            <li>
+                <a href="./public/movie-ranking.html">Movie Ranking Project</a>
+                <br><img src="./assets/images/movie-ranking.png" height="200" alt="Movie Ranking Project Screenshot">
+            </li>
+            <li>
+                <a href="./public/birthday-invite.html">Birthday Invite Project</a>
+                <br><img src="./assets/Portfolios/Birthday project.PNG" height="300" alt="Birthday Invite Project Screenshot">
+            </li>
+        </ol>
+        <br><hr>
+    </div>
+    <footer>
+        &copy; 2024 Nishant's Portfolio
+    </footer>
 </body>
 </html>
